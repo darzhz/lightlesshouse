@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LightlessHouse</title>
+    <meta name="author" content="darsh">
+    <meta name="description" content="light polution map">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ad2aff">
+    <link rel="icon" type="image/x-icon" href="icons/lighthouse.ico" />
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+    <link rel="stylesheet" href="style.css?version=3.2">
+    <script type="text/javascript" src="lib/p5/p5.min.js"></script>
+    <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/icons/awesome/a/css/all.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+    <main>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li>Made with ❤ and Javascript</li>
+                <h1>Credits</h1>
+                <li><a href="http://www.lightpollution.it/worldatlas/pages/fig1.htm"> P. Cinzano, F. Falchi (University of Padova),<br> C. D. Elvidge (NOAA National Geophysical Data Center, Boulder)<br>. Copyright Royal Astronomical Society.
+                    </a></li>
+                <li><a href="https://earthobservatory.nasa.gov/features/NightLights/page3.php">NasaEarthObervatory:2016EarthAtNight</a></li>
+                <li><a href="https://www.instagram.com/oru_pavam_pyyan">🐞Found Bugs🐞</a></li>
+            </ul>
+        </nav>
+        <div id="selector">
+            <li id="map2" class="fas fa-globe" onclick="setmap2(map)"></li>
+            <li id="map1" class="fas fa-moon" onclick="setmap(map)"></li>
+            <li id="map3" class="fas fa-satellite" onclick="setmap3(map)"></li>
+        </div>
+        <div id="mapid"></div>
+        <h1 id="ref">Lightless house</h1>
+        <p id="reff">Light pollution Map<br />maps satellite night light and pollution data from DMSP data.<br>created by<br><a href="https://www.github.com/darzhz">Darsh shyam kumar</a></p>
+    </main>
+    <script type="text/javascript" src="main_new.js"></script>
+    <script type="text/javascript" src="page.js"></script>
+</body>
+
+</html>

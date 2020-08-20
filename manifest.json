@@ -1,0 +1,21 @@
+{
+    "name": "LightlessHouse",
+    "short_name": "LightlessHouse",
+    "description": "Light pollution map",
+    "icons": [
+        {
+            "src": "icons/lighthouse.ico",
+            "sizes": "256x256",
+            "type": "icon/ico"
+    },
+        {
+            "src": "icons/lighthouse.png",
+            "sizes": "512x512",
+            "type": "icon/png"
+    }
+  ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#ad2aff",
+    "background_color": "#ad2aff"
+}
