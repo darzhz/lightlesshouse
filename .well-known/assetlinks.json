@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "me.glitch.lightlesshouse.twa",
+                   "sha256_cert_fingerprints": ["7C:24:F6:44:72:62:8C:96:E6:05:4B:D6:0F:7F:D6:2E:5E:60:1B:CD:06:8E:7C:76:C0:34:87:A6:15:A3:C7:12"] }
+    }]
