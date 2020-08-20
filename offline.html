@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LightlessHouse</title>
+    <meta name="author" content="darsh">
+    <meta name="description" content="light polution map">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="red">
+    <link rel="icon" type="image/x-icon" href="icons/lighthouse.ico" />
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="/icons/awesome/a/css/all.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <style type="text/css">
+        body{
+            background: url('icons/off.gif');
+        }
+        main {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0px;
+    /*grid-auto-rows: 45vh;*/
+    grid-template-areas:
+        " a a b b f"
+        " a a b b e"
+        " c c d d e"
+        " c c d d d";
+    align-items: start;
+    height: 100vh;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
+    display: none;
+}
+
+.leaflet-container {
+    background: #000;
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+    border: none;
+    background-clip: padding-box;
+}
+/*#ad2.aff*/
+.leaflet-bar a {
+    background-color: #09090978;
+    border: none;
+    color: red;
+}
+
+.leaflet-bar a:hover {
+    background-color: red;
+    border: none;
+    color: #09090978;
+}
+
+.ctl {
+    padding: 2px 10px 2px 10px;
+    background: white;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: right;
+}
+
+#mapid {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+#selector {
+    color: red;
+    display: grid;
+    list-style: none;
+    margin: 1px;
+    width: 100%;
+    z-index: 1001;
+    margin: 0;
+    background-color: transparent;
+    text-shadow: 1px 1px 2px;
+    grid-area: e;
+    font-size: x-large;
+    opacity: 0.8;
+}
+.nav-links h1 {
+    color: white;
+    font-family: monospace;
+}
+#map2 {
+    opacity: 1;
+    transform: scale(1.08);
+    color: white;
+    text-shadow: 1px 1px 10px red;
+}
+#selector li {
+    margin: 8px;
+}
+
+#map1.opener {
+    opacity: 1;
+    transform: scale(1.08);
+    color: white;
+    text-shadow: 1px 1px 10px red;
+}
+
+#map2.opener {
+    opacity: 1;
+    transform: scale(1);
+    color: red;
+/*    text-shadow: none;*/
+    text-shadow: 1px 1px 2px;
+}
+
+#map3.opener {
+    opacity: 1;
+    transform: scale(1.08);
+    color: white;
+    text-shadow: 1px 1px 10px red;
+}
+
+#ref {
+    position: absolute;
+    z-index: 1111;
+    /*transform: translate(6%, 75vh);*/
+    color: red;
+    font-family: 'Krona One', sans-serif;
+    margin: 0;
+    opacity: 0.8;
+    text-shadow: -2px 2px 6px #8a22cc;
+    top: 75%;
+    left: 4%;
+}
+
+#reff {
+    font-size: 9px;
+    position: absolute;
+    z-index: 1111;
+    /*transform: translate(6%, 33rem);*/
+    top: 81.6%;
+    left: 4.5%;
+    color: red;
+    font-family: 'Krona One', sans-serif;
+    margin: 0;
+    opacity: 0.5;
+    text-shadow: -2px -1px 5px #ee82ee26;
+}
+#reff a{
+    color: red;
+    text-align: center;
+}
+
+#tiff {
+    transform: translate(5%, 3145%);
+    position: absolute;
+    z-index: 1111;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 1.1rem;
+    list-style-type: none;
+}
+
+#tiff a {
+    color: crimson;
+    text-decoration: none;
+    font-family: krona one;
+    z-index: 1111;
+    position: absolute;
+}
+
+#tiff li {
+    text-decoration: none;
+    display: block;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+}
+
+nav {
+    height: 5vh;
+    background: #ff000033;
+    z-index: 1211;
+    position: absolute;
+    width: 100%;
+    box-shadow: 1px 1px 50px 1px #ff000070;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    /*width:50%;*/
+    /*    background-color: aquamarine;*/
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.nav-links li,
+a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+/*768*/
+@media screen and (max-width: 1366px) {
+    .line {
+        border-radius: 55px;
+        width: 32px;
+        height: 3px;
+        background-color: red;
+        margin: 5px;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    nav {
+        position: absolute;
+        width: 0;
+    }
+
+    .hamburger {
+        position: fixed;
+        cursor: pointer;
+        right: 93%;
+        top: 3vh;
+        /*transform: translate(1%, -1050%) rotate(0deg);*/
+        transform: translate(92vw, 0%) rotate(0deg);
+        z-index: 112;
+        transition: all 0.5s ease-in;
+    }
+    .hamburger.openie{
+        /*transform: translate(1%, -1050%) rotate(90deg);*/
+        transform: translate(92vw,0%) rotate(90deg);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav-links {
+        position: fixed;
+        opacity: 0.9;
+        /* background: crimson;
+        recent changes*/
+        background: linear-gradient(45deg, #000000e6, red);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -30%);
+        -webkit-clip-path: circle(100px at 90% -30%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1100px at 90% -30%);
+        -webkit-clip-path: circle(1100px at 90% -30%);
+        pointer-events: all;
+        z-index: 111;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li a {
+        font-size: large;
+        font-family: 'Teko', sans-serif;
+        /* font-family: krona one;*/
+        text-shadow: 1px 2px 5px black;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.8s;
+    }
+
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 1.0s;
+    }
+
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 1.2s;
+    }
+
+    /*
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1.4s;
+    }
+*/
+    li.fade {
+        opacity: 1;
+    }
+}
+
+    </style>
+    <main>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li>Made with ❤ and Javascript</li>
+                <h1>Credits</h1>
+                <li><a href="http://www.lightpollution.it/worldatlas/pages/fig1.htm"> P. Cinzano, F. Falchi (University of Padova),<br> C. D. Elvidge (NOAA National Geophysical Data Center, Boulder)<br>. Copyright Royal Astronomical Society.
+                    </a></li>
+                <li><a href="https://earthobservatory.nasa.gov/features/NightLights/page3.php">NasaEarthObervatory:2016EarthAtNight</a></li>
+                <li><a href="https://www.instagram.com/oru_pavam_pyyan">🐞Found Bugs🐞</a></li>
+            </ul>
+        </nav>
+        <div id="selector">
+            <li id="map2" class="fas fa-globe" onclick="setmap2(map)"></li>
+            <li id="map1" class="fas fa-moon" onclick="setmap(map)"></li>
+            <li id="map3" class="fas fa-satellite" onclick="setmap3(map)"></li>
+        </div>
+        <div id="mapid"></div>
+        <h1 id="ref">404 not Found<li class="fas fa-wifi"></li></h1>
+        <p id="reff">it appears that you are offline<br />please continue with an active internet connection</p>
+    </main>
+    <script type="text/javascript" src="page.js"></script>
+</body>
+
+</html>
