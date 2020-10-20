@@ -4,6 +4,7 @@ const links = document.querySelectorAll(".nav-links li");
 const map1 = document.querySelector("#map1");
 const map2 = document.querySelector("#map2");
 const map3 = document.querySelector("#map3");
+const map4 = document.querySelector("#map4");
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
     hamburger.classList.toggle('openie');
@@ -22,3 +23,7 @@ map2.addEventListener('click', () => {
 map3.addEventListener('click', () => {
     map3.classList.toggle("opener");
 });
+map4.addEventListener('click', () => {
+    map4.classList.toggle("opener");
+});
+
