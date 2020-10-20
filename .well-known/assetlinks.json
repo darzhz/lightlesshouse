@@ -1,5 +1,5 @@
 [{
       "relation": ["delegate_permission/common.handle_all_urls"],
-      "target" : { "namespace": "android_app", "package_name": "me.glitch.lightlesshouse.twa",
-                   "sha256_cert_fingerprints": ["7C:24:F6:44:72:62:8C:96:E6:05:4B:D6:0F:7F:D6:2E:5E:60:1B:CD:06:8E:7C:76:C0:34:87:A6:15:A3:C7:12"] }
+      "target" : { "namespace": "android_app", "package_name": "me.glitch.llh.twa",
+                   "sha256_cert_fingerprints": ["3A:72:A5:60:45:21:C3:00:0E:7E:49:C8:62:65:5A:5A:05:3B:CE:4D:3F:20:35:45:F0:D7:71:50:C1:34:34:A2"] }
     }]

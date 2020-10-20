@@ -102,6 +102,12 @@ main {
     color: white;
     text-shadow: 1px 1px 10px #ad2aff;
 }
+#map4.opener {
+    opacity: 1;
+    transform: scale(1.08);
+    color: white;
+    text-shadow: 1px 1px 10px #ad2aff;
+}
 
 #ref {
     position: absolute;
