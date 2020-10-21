@@ -1,11 +1,9 @@
-    let actual = 'https://lightlesshouse.imfast.io/actual/{z}/{x}/{y}.png';
+    let actual = 'actual/{z}/{x}/{y}.png';
     let stamen = 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png';
-let openstreet = 'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
-  //let stamen = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png';
 
 
     //  .. CartoDB Positron
-    var cartodb = L.tileLayer(openstreet, {
+    var cartodb = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
         minZoom: 0,
         maxZoom: 6
@@ -18,7 +16,7 @@ let openstreet = 'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
         maxZoom: 6
     });
 
-    var lyr = L.tileLayer('https://lightlesshouse.imfast.io/analysis/{z}/{x}/{y}.png', {
+    var lyr = L.tileLayer('analysis/{z}/{x}/{y}.png', {
         tms: true,
         opacity: 0.7,
         attribution: 'Original Data by <a href="http://www.lightpollution.it/worldatlas/pages/fig1.htm">Istituto di Scienza e Tecnologia dell\'Inquinamento Luminoso</a>',
@@ -43,7 +41,7 @@ let openstreet = 'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
     });
     // console.log(map);
     var basemaps = {
-        "openstreet": cartodb,
+        "CartoDB Positron": cartodb,
         "Stamen Toner": toner
     }
     var overlaymaps = {
@@ -109,15 +107,6 @@ let openstreet = 'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
             console.log("add");
         } else {
             map.addLayer(lyr);
-            console.log("remove");
-        }
-    }
-  function setmap4(map) {
-        if (Object.keys(map._layers).includes(cartodb._leaflet_id.toString())) {
-            map.removeLayer(cartodb);
-            console.log("add");
-        } else {
-            map.addLayer(cartodb);
             console.log("remove");
         }
     }

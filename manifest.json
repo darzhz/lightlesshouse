@@ -4,12 +4,12 @@
     "description": "Light pollution map",
     "icons": [
         {
-            "src": "https://lightlesshouse.imfast.io/icons/lighthouse.ico",
+            "src": "icons/lighthouse.ico",
             "sizes": "256x256",
             "type": "icon/ico"
     },
         {
-            "src": "https://lightlesshouse.imfast.io/icons/lighthouse.png",
+            "src": "icons/lighthouse.png",
             "sizes": "512x512",
             "type": "image/png"
     }
