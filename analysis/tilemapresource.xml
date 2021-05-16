@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
     <TileMap version="1.0.0" tilemapservice="http://tms.osgeo.org/1.0.0">
-      <Title>final.tif</Title>
+      <Title>150point.tif</Title>
       <Abstract></Abstract>
       <SRS>EPSG:3857</SRS>
-      <BoundingBox minx="-126.84084260089043" miny="-66.04514234048020" maxx="180.00000000000000" maxy="75.90261289926161"/>
-      <Origin x="-126.84084260089043" y="-66.04514234048020"/>
+      <BoundingBox minx="-126.86472835253504" miny="-65.78737634449269" maxx="180.00000000000000" maxy="75.16759763846763"/>
+      <Origin x="-126.86472835253504" y="-65.78737634449269"/>
       <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
       <TileSets profile="mercator">
         <TileSet href="0" units-per-pixel="156543.03390000000945" order="0"/>
@@ -14,6 +14,8 @@
         <TileSet href="4" units-per-pixel="9783.93961875000059" order="4"/>
         <TileSet href="5" units-per-pixel="4891.96980937500030" order="5"/>
         <TileSet href="6" units-per-pixel="2445.98490468750015" order="6"/>
+        <TileSet href="7" units-per-pixel="1222.99245234375007" order="7"/>
+        <TileSet href="8" units-per-pixel="611.49622617187504" order="8"/>
       </TileSets>
     </TileMap>
     

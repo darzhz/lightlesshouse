@@ -6,14 +6,14 @@
     var cartodb = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
         minZoom: 0,
-        maxZoom: 6
+        maxZoom: 8
     });
 
     //  .. OSM Toner
     var toner = L.tileLayer(stamen, {
         attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
         minZoom: 0,
-        maxZoom: 6
+        maxZoom: 8
     });
 
     var lyr = L.tileLayer('analysis/{z}/{x}/{y}.png', {
@@ -21,14 +21,14 @@
         opacity: 0.7,
         attribution: 'Original Data by <a href="http://www.lightpollution.it/worldatlas/pages/fig1.htm">Istituto di Scienza e Tecnologia dell\'Inquinamento Luminoso</a>',
         minZoom: 0,
-        maxZoom: 6
+        maxZoom: 8
     });
     var lyrr = L.tileLayer(actual, {
         tms: true,
         opacity: 0.8,
         attribution: '2016 Nasa EarthObservation Data ', //atribution needed
         minZoom: 0,
-        maxZoom: 6
+        maxZoom: 8
     });
     //49.9287352793907075, 26.579578699554787
     // Map
@@ -36,7 +36,7 @@
         center: [9.1058489, 76.5513027],
         zoom: 6,
         minZoom: 0,
-        maxZoom: 6,
+        maxZoom: 8,
         layers: [toner] //this is it
     });
     // console.log(map);
